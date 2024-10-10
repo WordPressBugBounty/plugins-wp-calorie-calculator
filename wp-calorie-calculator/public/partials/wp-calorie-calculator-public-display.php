@@ -173,6 +173,24 @@ endif;
 			</div>
 	</div>
 
+	<?php
+	if ( current_user_can( 'administrator' ) ) :
+		?>
+		<div class="wpcc-edit-link-wrapper">
+			<a class="wpcc-edit-link" target="_blank" href="<?php echo esc_url( admin_url( 'admin.php?page=wp-calorie-calculator' ) ); ?>"><?php esc_attr_e( 'Edit Calculator', 'wp-calorie-calculator' ); ?></a>
+			<span class="wpcc-tooltip">
+				<svg class="wpcc-tooltip-icon" style="width:20px;height:20px">
+					<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'public/images/help.svg#help' ); ?>"></use>
+				</svg>
+				<div class="wpcc-tooltip-text">
+					<?php esc_attr_e( 'You can see it because you’re logged in as an administrator', 'wp-calorie-calculator' ); ?>
+				</div>
+			</span>
+		</div>
+		<?php
+	endif;
+	?>
+
 	</form>
 
 	<div class="wpcc-result">
@@ -201,7 +219,7 @@ endif;
 					<input value="" class="wpcc-result-form-email" type="email" name="email" placeholder="<?php esc_attr_e( 'my@email.com', 'wp-calorie-calculator' ); ?>" required>
 				</div>
 				<button class="wpcc-result-form-submit" type="submit">
-				<?php echo esc_attr( 'Calculate now', 'wp-calorie-calculator' ); ?></button>
+				<?php echo esc_html__( 'Calculate now', 'wp-calorie-calculator' ); ?></button>
 
 				<?php if ( $wpcc_user_agreements ) : ?>
 					<div class="wpcc-result-form-user-agreement">
@@ -221,32 +239,22 @@ endif;
 
 			<div class="wpcc-result-form-notice"></div>
 		<?php endif; ?>
-
-		<div class="wpcc-powered">
-			<a href="https://wpcaloriecalculator.com/?visitsource=poweredby" target="_blank">
-				<?php esc_attr_e( 'Get WP Calorie Calculator', 'wp-calorie-calculator' ); ?>
-				<svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M15.0377 6.34326L13.6268 7.76078L16.897 11.0157L3.29199 11.0294L3.294 13.0294L16.8618 13.0158L13.6466 16.246L15.0641 17.6569L20.7078 11.9869L15.0377 6.34326Z" fill="currentColor" />
-				</svg>
-			</a>
-		</div>
 	</div>
 
-	<?php
-	if ( current_user_can( 'administrator' ) ) :
-		?>
-		<div class="wpcc-edit-link-wrapper">
-			<a class="wpcc-edit-link" target="_blank" href="<?php echo esc_url( admin_url( 'admin.php?page=wp-calorie-calculator' ) ); ?>"><?php esc_attr_e( 'Edit Calculator', 'wp-calorie-calculator' ); ?></a>
-			<span class="wpcc-tooltip">
-				<svg class="wpcc-tooltip-icon" style="width:20px;height:20px">
-					<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'public/images/help.svg#help' ); ?>"></use>
-				</svg>
-				<div class="wpcc-tooltip-text">
-					<?php esc_attr_e( 'You can see it because you’re logged in as an administrator', 'wp-calorie-calculator' ); ?>
-				</div>
-			</span>
+	<?php $hide_credits = get_option( 'wpcc_hide_credits', '' ); ?>
+	<?php if ( 'hide' !== $hide_credits ) : ?>
+		<div class="wpcc-powered">
+			<a href="https://wpcaloriecalculator.com/?visitsource=poweredby" target="_blank">
+				<?php esc_html_e( 'PRO', 'wp-calorie-calculator' ); ?>
+			</a>
+			<span>|</span>
+			<a href="https://caloriecalculator.cloud/?visitsource=poweredby" target="_blank">
+				<?php esc_html_e( 'Cloud', 'wp-calorie-calculator' ); ?>
+			</a>
+			<span>|</span>
+			<a href="https://belovdigital.agency/?visitsource=poweredby" target="_blank">
+				<?php esc_html_e( 'By BLV', 'wp-calorie-calculator' ); ?>
+			</a>
 		</div>
-		<?php
-	endif;
-	?>
+	<?php endif; ?>
 </div>

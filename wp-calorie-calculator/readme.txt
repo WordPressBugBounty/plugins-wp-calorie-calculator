@@ -1,10 +1,10 @@
 === WP Calorie Calculator ===
 Contributors: belovdigital
-Tags: calorie calculator, plan, health, nutrition, macros, sport, fitness, gym, lifestyle
+Tags: calorie calculator, health, nutrition, sport, fitness
 Requires at least: 4.7
-Tested up to: 6.6.1
+Tested up to: 6.6.2
 Requires PHP: 5.6
-Stable tag: 4.2.0
+Stable tag: 4.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -195,9 +195,19 @@ You can always message our online support or ask your question on the WordPress 
 
 == Changelog ==
 
+
+= 4.2.1 2024-10-10 =
+- Fixed the select layout on the calculator template.
+- Added the option to hide Credits.
+- Added support for WordPress 6.6.2
+- Added some changes to improve the performance and security of the plugin.
+- Fixed the layout of the settings page for smoother scrolling.
+
+
 = 4.2.0 2024-08-15 =
 - Added site name instead of the default WordPress in the email sender header.
 - WordPress 6.6.1 compatibility added.
+
 
 = 4.1.0 2024-04-29 =
 - Added integration with ConvertKit.

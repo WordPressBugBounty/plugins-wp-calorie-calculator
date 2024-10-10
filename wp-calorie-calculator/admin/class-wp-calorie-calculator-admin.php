@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -74,7 +73,12 @@ class WP_Calorie_Calculator_Admin {
 		if ( get_transient( 'wp_calorie_calculator_activation_notice' ) ) :
 			?>
 			<div class="notice notice-success updated is-dismissible">
-				<p><?php echo __( 'Thank you for installing our WP Calorie Calculator plugin. The next step is to <a href="admin.php?page=wp-calorie-calculator">configure the settings of the plugin</a>.', 'wp-calorie-calculator' ); ?></p>
+				<p>
+					<?php
+					// translators: %s - settings link.
+					echo esc_html__( 'Thank you for installing our WP Calorie Calculator plugin. The next step is to <a href="admin.php?page=wp-calorie-calculator">configure the settings of the plugin</a>.', 'wp-calorie-calculator' );
+					?>
+				</p>
 			</div>
 			<?php
 			delete_transient( 'wp_calorie_calculator_activation_notice' );
@@ -85,9 +89,10 @@ class WP_Calorie_Calculator_Admin {
 	 * Register the stylesheets for the admin area.
 	 *
 	 * @since    1.0.0
+	 * @param string $hook The current admin page.
 	 */
 	public function enqueue_styles( $hook ) {
-		if ( $hook !== 'toplevel_page_' . $this->plugin_name ) {
+		if ( 'toplevel_page_' . $this->plugin_name !== $hook ) {
 			return;
 		}
 
@@ -99,11 +104,13 @@ class WP_Calorie_Calculator_Admin {
 	 * Register the JavaScript for the admin area.
 	 *
 	 * @since    1.0.0
+	 * @param string $hook The current admin page.
 	 */
 	public function enqueue_scripts( $hook ) {
-		if ( $hook !== 'toplevel_page_' . $this->plugin_name ) {
+		if ( 'toplevel_page_' . $this->plugin_name !== $hook ) {
 			return;
 		}
+
 		wp_enqueue_script( 'underscore' );
 		wp_enqueue_script( 'wp-color-picker' );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wp-calorie-calculator-admin.min.js', array( 'jquery' ), $this->version, false );
@@ -165,6 +172,7 @@ class WP_Calorie_Calculator_Admin {
 		register_setting( 'wp-calorie-calculator-settings-group', 'wpcc_user_agreements_text' );
 		register_setting( 'wp-calorie-calculator-settings-group', 'wpcc_enable_zapier' );
 		register_setting( 'wp-calorie-calculator-settings-group', 'wpcc_zapier_webhook' );
+		register_setting( 'wp-calorie-calculator-settings-group', 'wpcc_hide_credits' );
 	}
 
 	/**
@@ -175,13 +183,14 @@ class WP_Calorie_Calculator_Admin {
 	public function settings_page_callback() {
 		ob_start();
 		include 'partials/wp-calorie-calculator-admin-display.php';
-		echo ob_get_clean();
+		echo ob_get_clean(); // phpcs:ignore
 	}
 
 	/**
 	 * Plugin settings link.
 	 *
 	 * @since    1.0.0
+	 * @param array $links Plugin settings links.
 	 */
 	public function plugin_settings_link( $links ) {
 		$settings_link = '<a href="admin.php?page=wp-calorie-calculator">' . __( 'Settings', 'wp-calorie-calculator' ) . '</a>';
@@ -195,14 +204,17 @@ class WP_Calorie_Calculator_Admin {
 	 * @since    2.0.0
 	 */
 	public function pro_version_advertisement() {
-		delete_option( 'wpcc_pro_version_announcement' ); // delete previous notice option from db
+		// Delete previous notice option from db.
+		delete_option( 'wpcc_pro_version_announcement' );
 
 		if ( ! get_option( 'wpcc_pro_version_advertisement' ) ) :
 			?>
 			<div class="notice notice-success updated is-dismissible">
-				<p style="font-size:15px;font-weight:500;"><?php echo __( 'The PRO edition of WP Calorie Calculator is out!', 'wp-calorie-calculator' ); ?></p>
-				<p><?php echo __( 'ConvertKit, Hubspot, Mailchimp, Zapier integration, Google reCAPTCHA, flexible calculation and style settings, custom templates, a fully customizable Elementor widget and other cool add-ons - try now and make your website users’ favorite place to be!', 'wp-calorie-calculator' ); ?></p>
-				<p><a class="button" href="https://wpcaloriecalculator.com/?visitsource=wporgfree" target="_blank"><?php echo __( 'Get it', 'wp-calorie-calculator' ); ?></a></p>
+				<p style="font-size:15px;font-weight:500;"><?php echo esc_html__( 'The PRO edition of WP Calorie Calculator is out!', 'wp-calorie-calculator' ); ?></p>
+				<p>
+					<?php echo esc_html__( 'ConvertKit, Hubspot, Mailchimp, Zapier integration, Google reCAPTCHA, flexible calculation and style settings, custom templates, a fully customizable Elementor widget and other cool add-ons - try now and make your website users’ favorite place to be!', 'wp-calorie-calculator' ); ?>
+				</p>
+				<p><a class="button" href="https://wpcaloriecalculator.com/?visitsource=wporgfree" target="_blank"><?php echo esc_html__( 'Get it', 'wp-calorie-calculator' ); ?></a></p>
 			</div>
 			<?php
 			update_option( 'wpcc_pro_version_advertisement', true );
@@ -224,21 +236,6 @@ class WP_Calorie_Calculator_Admin {
 			null,
 			99
 		);
-	}
-
-	/**
-	 * Go Pro menu link script.
-	 *
-	 * @since    2.0.0
-	 */
-	public function go_pro_menu_script() {
-		$html      = '<script>';
-			$html .= "jQuery('#toplevel_page_wp-calorie-calculator .wp-submenu a[href*=wpcc-go-pro]').css('color', 'orange');";
-			$html .= "jQuery('#toplevel_page_wp-calorie-calculator .wp-submenu a[href*=wpcc-go-pro]').css('font-weight', 'bold');";
-			$html .= "jQuery('#toplevel_page_wp-calorie-calculator .wp-submenu a[href*=wpcc-go-pro]').attr('target', '_blank');";
-			$html .= "jQuery('#toplevel_page_wp-calorie-calculator .wp-submenu a[href*=wpcc-go-pro]').attr('href', 'https://wpcaloriecalculator.com/?visitsource=wporgfree');";
-		$html     .= '</script>';
-		echo $html;
 	}
 
 	/**

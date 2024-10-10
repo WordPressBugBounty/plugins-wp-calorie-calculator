@@ -162,7 +162,6 @@ class WP_Calorie_Calculator {
 		$this->loader->add_filter( "plugin_action_links_{$plugin_file}", $plugin_admin, 'plugin_settings_link' );
 		$this->loader->add_action( "plugin_action_links_{$plugin_file}", $plugin_admin, 'wpcc_pro_plugin_settings_link' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'go_pro_menu' );
-		$this->loader->add_action( 'admin_footer', $plugin_admin, 'go_pro_menu_script' );
 		$this->loader->add_action( 'wp_ajax_change_color_schema', $plugin_admin, 'change_color_schema_callback' );
 		$this->loader->add_action( 'wp_ajax_nopriv_change_color_schema', $plugin_admin, 'change_color_schema_callback' );
 	}

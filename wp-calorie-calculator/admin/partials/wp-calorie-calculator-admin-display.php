@@ -200,61 +200,62 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 				</div>
 
 				<div class="wpcc-settings-tabs">
-
-					<ul id="wpcc-settings-tab-links">
-						<li>
-							<div class="wpcc-shortcode-desktop">
-								<div class="wpcc-shortcode">
-									<button class="wpcc-shortcode-title" type="button"><?php esc_attr_e( 'Your Shortcode', 'wp-calorie-calculator' ); ?></button>
-									<div class="wpcc-shortcode-result-wrapper">
-										<textarea class="wpcc-shortcode-result" rows="1" readonly>[cal_calc]</textarea>
-										<button class="wpcc-shortcode-copy wpcc-tooltip" type="button">
-											<div class="wpcc-tooltip-text"><?php esc_attr_e( 'Copy shortcode', 'wp-calorie-calculator' ); ?></div>
-										</button>
-									</div>
-								</div>	
-							</div>																
-						</li>
-						<li>
-							<a href="#main-settings" class="active">
-								<span><?php esc_attr_e( 'Settings', 'wp-calorie-calculator' ); ?></span>
-								<svg>
-									<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-main.svg#main' ); ?>"></use>
-								</svg>							
+					<div class="wpcc-settings-tabs-links">
+						<ul id="wpcc-settings-tab-links">
+							<li>
+								<div class="wpcc-shortcode-desktop">
+									<div class="wpcc-shortcode">
+										<button class="wpcc-shortcode-title" type="button"><?php esc_attr_e( 'Your Shortcode', 'wp-calorie-calculator' ); ?></button>
+										<div class="wpcc-shortcode-result-wrapper">
+											<textarea class="wpcc-shortcode-result" rows="1" readonly>[cal_calc]</textarea>
+											<button class="wpcc-shortcode-copy wpcc-tooltip" type="button">
+												<div class="wpcc-tooltip-text"><?php esc_attr_e( 'Copy shortcode', 'wp-calorie-calculator' ); ?></div>
+											</button>
+										</div>
+									</div>	
+								</div>																
+							</li>
+							<li>
+								<a href="#main-settings" class="active">
+									<span><?php esc_attr_e( 'Settings', 'wp-calorie-calculator' ); ?></span>
+									<svg>
+										<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-main.svg#main' ); ?>"></use>
+									</svg>							
+								</a>
+							<li>
+								<a href="#calculation-settings">
+									<span><?php esc_attr_e( 'Calculation', 'wp-calorie-calculator' ); ?></span>
+									<svg>
+										<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-calculation.svg#calc' ); ?>"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#styling-settings">
+									<span><?php esc_attr_e( 'Styling', 'wp-calorie-calculator' ); ?></span>
+									<svg>
+										<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-styling.svg#styling' ); ?>"></use>
+									</svg>
 							</a>
-						<li>
-							<a href="#calculation-settings">
-								<span><?php esc_attr_e( 'Calculation', 'wp-calorie-calculator' ); ?></span>
-								<svg>
-									<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-calculation.svg#calc' ); ?>"></use>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#styling-settings">
-								<span><?php esc_attr_e( 'Styling', 'wp-calorie-calculator' ); ?></span>
-								<svg>
-									<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-styling.svg#styling' ); ?>"></use>
-								</svg>
-						</a>
-						</li>
-						<li>
-							<a href="#integration-settings">
-								<span><?php esc_html_e( 'Integrations', 'wp-calorie-calculator' ); ?></span>
-								<svg>
-									<use xlink:href="<?php echo esc_url( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-integrations.svg#integration' ); ?>"></use>
-								</svg>
-							</a>
-						</li>
-						<li>
-							<a href="#templates-settings">
-								<span><?php esc_attr_e( 'Email templates', 'wp-calorie-calculator' ); ?></span>
-								<svg>
-									<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-email.svg#email' ); ?>"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
+							</li>
+							<li>
+								<a href="#integration-settings">
+									<span><?php esc_html_e( 'Integrations', 'wp-calorie-calculator' ); ?></span>
+									<svg>
+										<use xlink:href="<?php echo esc_url( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-integrations.svg#integration' ); ?>"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#templates-settings">
+									<span><?php esc_attr_e( 'Email templates', 'wp-calorie-calculator' ); ?></span>
+									<svg>
+										<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-email.svg#email' ); ?>"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
 
 					<div class="wpcc-settings-tabs-wrapper">
 
@@ -379,7 +380,6 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 													</div>
 												</div>
 											</label>
-											
 										</div>
 									</div>
 
@@ -432,6 +432,21 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 												<p class="wpcc-settings-description"><?php esc_attr_e( 'If you change this value make sure to wrap the links using the {} signs: {privacy_policy} and {terms_and_conditions}.', 'wp-calorie-calculator' ); ?></p>
 											</div>
 										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="wpcc-settings-group">
+								<?php $hide_credits = get_option( 'wpcc_hide_credits', '' ); ?>
+								<div class="wpcc-settings-group">
+									<div class="wpcc-settings-group-title">
+										<h3><?php esc_attr_e( 'Credits', 'wp-calorie-calculator' ); ?></h3>
+									</div>
+									<div class="wpcc-settings-group-content">
+										<label class="wpcc-checkbox">
+											<input type="checkbox" name="wpcc_hide_credits" value="hide" <?php checked( 'hide', $hide_credits ); ?>>
+											<span><?php esc_attr_e( 'Hide Credits', 'wp-calorie-calculator' ); ?></span>
+										</label>
 									</div>
 								</div>
 							</div>
@@ -1160,7 +1175,7 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 											<label class="wpcc-settings-group-label text-left"><?php esc_html_e( 'From (Email)', 'wp-calorie-calculator' ); ?>
 												<div class="wpcc-settings-wrapper" dir="ltr">
 													<input class="disabled" type="text" name="wpcc_email_user_from" disabled dir="ltr"/>
-													<div class="wpcc-settings-group-label--text" dir="ltr">@<?php echo isset( $current_domain ) ? esc_attr( $current_domain ) : esc_html__( 'domain.com', 'fiwy' ); ?></div>
+													<div class="wpcc-settings-group-label--text" dir="ltr">@<?php echo isset( $current_domain ) ? esc_attr( $current_domain ) : esc_html__( 'domain.com', 'wp-calorie-calculator' ); ?></div>
 												</div>
 											</label>
 										</div>
@@ -1200,15 +1215,16 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 
 
 				<div class="wpcc-banner wpcc-banner--red">
-					<div class="wpcc-banner-title"><?php esc_attr_e( "Make your website users' favorite place to be!", 'wp-calorie-calculator' ); ?></div>
+					<div class="wpcc-banner-title"><?php esc_attr_e( 'PRO Edition', 'wp-calorie-calculator' ); ?></div>
 					<div class="wpcc-banner-description wpcc-banner-description--bold"><?php esc_attr_e( 'Support of: ', 'wp-calorie-calculator' ); ?></div>
-					<div class="wpcc-banner-description"><?php esc_attr_e( 'ConvertKit, Hubspot, Mailchimp, Zapier, Google reCAPTCHA, Elementor widget and other amazing add-ons', 'wp-calorie-calculator' ); ?></div>
+					<div class="wpcc-banner-description"><?php esc_attr_e( 'ConvertKit, Hubspot, Mailchimp, Zapier, Make, Google reCAPTCHA, Elementor widget and other amazing add-ons', 'wp-calorie-calculator' ); ?></div>
 					<a class="wpcc-banner-button" href="https://wpcaloriecalculator.com/?visitsource=wporgfree" target="_blank"><?php esc_attr_e( 'Get Pro', 'wp-calorie-calculator' ); ?></a>
 				</div>
 
 
 			<div class="wpcc-banner wpcc-banner--purple">
-				<div class="wpcc-banner-title"><?php esc_attr_e( 'Hi there!', 'wp-calorie-calculator' ); ?></div>
+				<img src="<?php echo esc_url( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/review-stars.svg' ); ?>" alt="" class="wpcc-banner-stars">
+				<!-- <div class="wpcc-banner-title"><?php esc_attr_e( 'Hi there!', 'wp-calorie-calculator' ); ?></div> -->
 				<div class="wpcc-banner-description">
 					<p>
 						<?php
@@ -1233,7 +1249,7 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 						?>
 					</p>	
 				</div>
-				<img src="<?php echo esc_url( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/review-stars.svg' ); ?>" alt="" class="wpcc-banner-stars">
+				
 				<a href="https://www.trustpilot.com/evaluate/wpcaloriecalculator.com" class="wpcc-banner-button" target="_blank"><?php esc_html_e( 'Rate the Plugin', 'wp-calorie-calculator' ); ?></a>
 			</div>
 			</div>
@@ -1241,6 +1257,35 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 		</div>
 
 		<div class="wpcc-settings-footer">
+
+			<div class="wpcc-powered">
+				<a href="https://wpcaloriecalculator.com/?visitsource=poweredby" target="_blank">
+					<?php esc_html_e( 'WP Calorie Calculator PRO', 'wp-calorie-calculator' ); ?>
+				</a>
+				<span>|</span>
+				<a href="https://caloriecalculator.cloud/?visitsource=poweredby" target="_blank">
+					<?php esc_html_e( 'Calorie Calculator Cloud', 'wp-calorie-calculator' ); ?>
+				</a>
+				<span>|</span>
+				<a href="https://belovdigital.agency/?visitsource=poweredby" target="_blank">
+					<?php esc_html_e( 'Made by', 'wp-calorie-calculator' ); ?>
+					<svg class="wpcc-powered__logo" xmlns="http://www.w3.org/2000/svg" width="94" height="25" viewBox="0 0 94 25" fill="none">
+						<g clip-path="url(#clip0_16_116)">
+							<path d="M9.65625 6.23438C11.3854 6.23438 12.9427 6.63021 14.3281 7.42188C15.7135 8.20312 16.7917 9.29167 17.5625 10.6875C18.3438 12.0729 18.7344 13.6302 18.7344 15.3594C18.7344 17.0885 18.3438 18.651 17.5625 20.0469C16.7917 21.4323 15.7135 22.5208 14.3281 23.3125C12.9427 24.0938 11.3854 24.4844 9.65625 24.4844C7.58333 24.4844 5.78125 23.8438 4.25 22.5625H3.5H0.25V0.484375H4.92188V7.65625C6.30729 6.70833 7.88542 6.23438 9.65625 6.23438ZM5.90625 18.7188C6.80208 19.6146 7.92708 20.0625 9.28125 20.0625C10.6354 20.0625 11.7552 19.6146 12.6406 18.7188C13.5365 17.8229 13.9844 16.7031 13.9844 15.3594C13.9844 13.9948 13.5365 12.8646 12.6406 11.9688C11.7552 11.0729 10.6354 10.625 9.28125 10.625C7.92708 10.625 6.80208 11.0781 5.90625 11.9844C5.01042 12.8802 4.5625 14.0052 4.5625 15.3594C4.5625 16.7031 5.01042 17.8229 5.90625 18.7188Z" fill="#6B9D87"></path>
+							<path d="M38.8594 15.2969C38.8594 15.7656 38.8281 16.224 38.7656 16.6719H25.6875C25.8854 17.849 26.3542 18.7552 27.0938 19.3906C27.8438 20.0156 28.7865 20.3281 29.9219 20.3281C30.724 20.3281 31.4427 20.151 32.0781 19.7969C32.724 19.4427 33.224 18.9531 33.5781 18.3281H38.4844C37.8594 20.2135 36.776 21.7135 35.2344 22.8281C33.6927 23.9323 31.9219 24.4844 29.9219 24.4844C28.2448 24.4844 26.7188 24.0885 25.3438 23.2969C23.9792 22.4948 22.9062 21.3958 22.125 20C21.3438 18.6042 20.9531 17.0573 20.9531 15.3594C20.9531 13.651 21.3385 12.099 22.1094 10.7031C22.8906 9.30729 23.9635 8.21354 25.3281 7.42188C26.7031 6.6302 28.2344 6.23438 29.9219 6.23438C31.651 6.23438 33.2031 6.64583 34.5781 7.46875C35.9531 8.28125 37.0104 9.375 37.75 10.75C38.4896 12.125 38.8594 13.6406 38.8594 15.2969ZM29.9219 10.2188C28.8906 10.2188 28.0156 10.5052 27.2969 11.0781C26.5781 11.651 26.0833 12.4531 25.8125 13.4844H34.1875C33.8646 12.4323 33.3333 11.625 32.5938 11.0625C31.8646 10.5 30.974 10.2188 29.9219 10.2188Z" fill="#6B9D87"></path>
+							<path d="M42.1875 24V0.484375H46.8594V24H42.1875Z" fill="#6B9D87"></path>
+							<path d="M59.5469 24.4844C57.7865 24.4844 56.1927 24.0885 54.7656 23.2969C53.3385 22.5052 52.2188 21.4115 51.4062 20.0156C50.6042 18.6198 50.2031 17.0677 50.2031 15.3594C50.2031 13.6302 50.6042 12.0729 51.4062 10.6875C52.2188 9.29167 53.3385 8.20311 54.7656 7.42188C56.1927 6.6302 57.7865 6.23438 59.5469 6.23438C61.2969 6.23438 62.8854 6.6302 64.3125 7.42188C65.7396 8.20311 66.8594 9.29167 67.6719 10.6875C68.4844 12.0833 68.8906 13.6406 68.8906 15.3594C68.8906 17.0677 68.4844 18.6198 67.6719 20.0156C66.8594 21.4115 65.7396 22.5052 64.3125 23.2969C62.8854 24.0885 61.2969 24.4844 59.5469 24.4844ZM56.2344 18.7812C57.099 19.6562 58.2031 20.0938 59.5469 20.0938C60.8906 20.0938 61.9948 19.6562 62.8594 18.7812C63.724 17.8958 64.1562 16.7552 64.1562 15.3594C64.1562 13.9635 63.724 12.8281 62.8594 11.9531C61.9948 11.0677 60.8906 10.625 59.5469 10.625C58.2031 10.625 57.099 11.0677 56.2344 11.9531C55.3698 12.8281 54.9375 13.9635 54.9375 15.3594C54.9375 16.7552 55.3698 17.8958 56.2344 18.7812Z" fill="#6B9D87"></path>
+							<path d="M82.9531 6.71875H87.7969L80.9375 24H76.625L69.5938 6.71875H74.5781L78.7969 18.2969L82.9531 6.71875Z" fill="#6B9D87"></path>
+						</g>
+						<circle cx="91.5" cy="21.5" r="2.5" fill="#6B9D87"></circle>
+						<defs>
+							<clipPath id="clip0_16_116">
+								<rect width="88" height="25" fill="white"></rect>
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</div>
 

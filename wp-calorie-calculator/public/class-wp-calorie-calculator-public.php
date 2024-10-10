@@ -101,6 +101,11 @@ class WP_Calorie_Calculator_Public {
 	 */
 	public function send_result_on_email() {
 		$server_response = array();
+		if ( ! isset( $_POST['_wpnonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['_wpnonce'] ), 'wpcc-nonce' ) ) {
+			$server_response['error'] = __( 'Nonce verification failed!', 'wp-calorie-calculator' );
+			echo wp_json_encode( $server_response );
+			wp_die();
+		}
 
 		// Input data.
 		$user_email         = isset( $_POST['user_email'] ) ? sanitize_text_field( wp_unslash( $_POST['user_email'] ) ) : '';
@@ -138,9 +143,9 @@ class WP_Calorie_Calculator_Public {
 		$age           = isset( $_POST['fields']['age'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['age'] ) ) : '';
 		$height        = isset( $_POST['fields']['height'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['height'] ) ) : '';
 		$height2       = isset( $_POST['fields']['height2'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['height2'] ) ) : '';
-		$height_string = $metric_system == 'true' ? $height . __( 'cm', 'wp-calorie-calculator' ) : $height . __( 'ft', 'wp-calorie-calculator' ) . ' ' . $height2 . __( 'in', 'wp-calorie-calculator' );
+		$height_string = $metric_system || 'true' === $metric_system ? $height . __( 'cm', 'wp-calorie-calculator' ) : $height . __( 'ft', 'wp-calorie-calculator' ) . ' ' . $height2 . __( 'in', 'wp-calorie-calculator' );
 		$weight        = isset( $_POST['fields']['weight'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['weight'] ) ) : '';
-		$weight_string = $metric_system == 'true' ? $weight . __( 'kg', 'wp-calorie-calculator' ) : $weight . __( 'lbs', 'wp-calorie-calculator' );
+		$weight_string = $metric_system || 'true' === $metric_system ? $weight . __( 'kg', 'wp-calorie-calculator' ) : $weight . __( 'lbs', 'wp-calorie-calculator' );
 		$activity      = isset( $_POST['fields']['activity'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['activity'] ) ) : '';
 		switch ( $activity ) {
 			case 'Sedentary':
@@ -197,13 +202,20 @@ class WP_Calorie_Calculator_Public {
 		$message  = __( 'Hi!', 'wp-calorie-calculator' ) . "\n";
 		$message .= __( 'It’s Calorie Calculator.', 'wp-calorie-calculator' ) . "\n";
 		$message .= __( 'Looks like you requested your target daily calorie intake.', 'wp-calorie-calculator' ) . "\n";
+		// translators: %s - result.
 		$message .= sprintf( __( 'It is %s', 'wp-calorie-calculator' ), $result ) . "\n\n";
 		$message .= __( 'Your parameters:', 'wp-calorie-calculator' ) . "\n\n";
+		// translators: %s - gender.
 		$message .= sprintf( __( 'Sex: %s', 'wp-calorie-calculator' ), $gender ) . "\n";
+		// translators: %s - age.
 		$message .= sprintf( __( 'Age: %s', 'wp-calorie-calculator' ), $age ) . "\n";
+		// translators: %s - height.
 		$message .= sprintf( __( 'Height: %s', 'wp-calorie-calculator' ), $height_string ) . "\n";
+		// translators: %s - weight.
 		$message .= sprintf( __( 'Weight: %s', 'wp-calorie-calculator' ), $weight_string ) . "\n";
+		// translators: %s - activity level.
 		$message .= sprintf( __( 'Activity level: %s', 'wp-calorie-calculator' ), $activity ) . "\n";
+		// translators: %s - goal.
 		$message .= sprintf( __( 'Goal: %s', 'wp-calorie-calculator' ), $goal ) . "\n\n";
 		$message .= __( 'You go!', 'wp-calorie-calculator' ) . "\n\n";
 		$message .= __( 'Best regards,', 'wp-calorie-calculator' ) . "\n";
@@ -212,15 +224,15 @@ class WP_Calorie_Calculator_Public {
 		$server_response['user_email_sent'] = wp_mail( $user_email, $subject, $message, $headers );
 
 		// Notification email.
-		$subject                                    = __( 'New Calorie Calculator user', 'wp-calorie-calculator' );
-		$message                                    = __( 'Hey, someone just shared their email address with you.', 'wp-calorie-calculator' ) . "\n";
-		$message                                   .= sprintf( __( 'Here it is: %s', 'wp-calorie-calculator' ), $user_email ) . "\n\n";
-		$message                                   .= __( 'Make it the beginning of your brand’s active conversation.', 'wp-calorie-calculator' ) . "\n\n";
-		$message                                   .= __( 'Best regards,', 'wp-calorie-calculator' ) . "\n";
-		$message                                   .= __( 'Calorie Calculator.', 'wp-calorie-calculator' );
-		$server_response['notification_email_sent'] = wp_mail( $notification_email, $subject, $message, $headers );
+		$subject = __( 'New Calorie Calculator user', 'wp-calorie-calculator' );
+		$message = __( 'Hey, someone just shared their email address with you.', 'wp-calorie-calculator' ) . "\n";
+		// translators: %s - user email.
+		$message .= sprintf( __( 'Here it is: %s', 'wp-calorie-calculator' ), $user_email ) . "\n\n";
+		$message .= __( 'Make it the beginning of your brand’s active conversation.', 'wp-calorie-calculator' ) . "\n\n";
+		$message .= __( 'Best regards,', 'wp-calorie-calculator' ) . "\n";
+		$message .= __( 'Calorie Calculator.', 'wp-calorie-calculator' );
 
-		// Send the contact to Zapier.
+		$server_response['notification_email_sent'] = wp_mail( $notification_email, $subject, $message, $headers );
 
 		echo wp_json_encode( $server_response );
 		wp_die();
