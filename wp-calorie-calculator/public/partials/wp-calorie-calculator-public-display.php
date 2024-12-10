@@ -88,7 +88,7 @@ endif;
 				<div class="wpcc-select-wrapper wpcc-sex">
 					<input class="wpcc-sex-placeholder" type="hidden" value="<?php esc_attr_e( 'm / f', 'wp-calorie-calculator' ); ?>"/>					
 					<label for="wpcc-gender"><?php esc_attr_e( 'Sex', 'wp-calorie-calculator' ); ?></label>
-					<select class="wpcc-select select-sex" name="wpcc-gender" id="wpcc-gender" value="false">
+					<select class="wpcc-select select-sex no-select2" name="wpcc-gender" id="wpcc-gender" value="false">
 						<option value="male"><?php esc_attr_e( 'Male', 'wp-calorie-calculator' ); ?></option>
 						<option value="female"><?php esc_attr_e( 'Female', 'wp-calorie-calculator' ); ?></option>
 					</select>
@@ -135,7 +135,7 @@ endif;
 
 			<div class="wpcc-group wpcc-group-goal">
 				<label class="wpcc-group-title" for="wpcc-goal"><?php esc_attr_e( 'Goal', 'wp-calorie-calculator' ); ?></label>
-				<select class="wpcc-select select-value" name="wpcc-goal" id="wpcc-goal">
+				<select class="wpcc-select select-value no-select2" name="wpcc-goal" id="wpcc-goal">
 					<?php $i = 0; foreach ( $wpcc_goals as $key => $goal ) : ?>
 						<option value="<?php echo esc_attr( $goal['name'] . '%-%' . $goal['coefficient'] ); ?>" <?php selected( 0, $i ); ?>><?php echo esc_attr( $goal['name'] ); ?></option>
 						<?php
