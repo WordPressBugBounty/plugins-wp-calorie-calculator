@@ -1,4 +1,4 @@
-# Copyright (C) 2024 WP Calorie Calculator
+# Copyright (C) 2025 WP Calorie Calculator
 # This file is distributed under the same license as the WP Calorie Calculator package.
 msgid ""
 msgstr ""

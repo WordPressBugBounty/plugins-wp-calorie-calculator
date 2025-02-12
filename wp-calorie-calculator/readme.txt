@@ -2,9 +2,9 @@
 Contributors: belovdigital
 Tags: calorie calculator, plan, health, nutrition, macros, sport, fitness, gym, lifestyle
 Requires at least: 4.7
-Tested up to: 6.7.1
+Tested up to: 6.7.2
 Requires PHP: 5.6
-Stable tag: 4.2.3
+Stable tag: 4.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -194,6 +194,11 @@ You can always message our online support or ask your question on the WordPress 
 
 
 == Changelog ==
+
+= 4.2.4 2025-02-12 =
+- Added support for WordPress 6.7.2
+- Fixed the bug with imperial system results.
+
 
 = 4.2.3 2024-12-10 =
 - Fixed the bug with Select2 conflict.

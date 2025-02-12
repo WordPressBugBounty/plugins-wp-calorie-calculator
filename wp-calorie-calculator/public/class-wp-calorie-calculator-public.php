@@ -111,7 +111,7 @@ class WP_Calorie_Calculator_Public {
 		$user_email         = isset( $_POST['user_email'] ) ? sanitize_text_field( wp_unslash( $_POST['user_email'] ) ) : '';
 		$notification_email = ! empty( get_option( 'wpcc-notification-email' ) ) ? get_option( 'wpcc-notification-email' ) : get_option( 'admin_email' );
 		$result             = isset( $_POST['result'] ) ? sanitize_text_field( wp_unslash( $_POST['result'] ) ) : '';
-		$metric_system      = isset( $_POST['fields']['metric_system'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['metric_system'] ) ) : '';
+		$metric_system      = isset( $_POST['fields']['metric_system'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['metric_system'] ) ) : 'metric';
 		$goal               = isset( $_POST['fields']['goal'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['goal'] ) ) : '';
 		switch ( $goal ) {
 			case 'Maintain Weight':
@@ -130,7 +130,7 @@ class WP_Calorie_Calculator_Public {
 				$goal = __( 'Fast Weight Gain', 'wp-calorie-calculator' );
 				break;
 		}
-		$unit   = $metric_system ? 'Metric' : 'Imperial';
+		$unit   = 'metric' === $metric_system ? 'Metric' : 'Imperial';
 		$gender = isset( $_POST['fields']['gender'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['gender'] ) ) : '';
 		switch ( $gender ) {
 			case 'male':
@@ -143,9 +143,9 @@ class WP_Calorie_Calculator_Public {
 		$age           = isset( $_POST['fields']['age'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['age'] ) ) : '';
 		$height        = isset( $_POST['fields']['height'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['height'] ) ) : '';
 		$height2       = isset( $_POST['fields']['height2'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['height2'] ) ) : '';
-		$height_string = $metric_system || 'true' === $metric_system ? $height . __( 'cm', 'wp-calorie-calculator' ) : $height . __( 'ft', 'wp-calorie-calculator' ) . ' ' . $height2 . __( 'in', 'wp-calorie-calculator' );
+		$height_string = 'metric' === $metric_system ? $height . __( 'cm', 'wp-calorie-calculator' ) : $height . __( 'ft', 'wp-calorie-calculator' ) . ' ' . $height2 . __( 'in', 'wp-calorie-calculator' );
 		$weight        = isset( $_POST['fields']['weight'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['weight'] ) ) : '';
-		$weight_string = $metric_system || 'true' === $metric_system ? $weight . __( 'kg', 'wp-calorie-calculator' ) : $weight . __( 'lbs', 'wp-calorie-calculator' );
+		$weight_string = 'metric' === $metric_system ? $weight . __( 'kg', 'wp-calorie-calculator' ) : $weight . __( 'lbs', 'wp-calorie-calculator' );
 		$activity      = isset( $_POST['fields']['activity'] ) ? sanitize_text_field( wp_unslash( $_POST['fields']['activity'] ) ) : '';
 		switch ( $activity ) {
 			case 'Sedentary':
