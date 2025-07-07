@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:       WP Calorie Calculator
  * Description:       Calorie Calculator gives you the shortcode with the flexible settings that you can place into the page, post or sidebar widget. Or actually anywhere you can place the shortcode.
- * Version:           4.2.4
+ * Version:           4.2.6
  * Requires at least: 4.7
  * Requires PHP:      5.6
  * Author:            Belov Digital Agency
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Plugin constants
  */
-define( 'WP_CALORIE_CALCULATOR_VERSION', '4.2.4' );
+define( 'WP_CALORIE_CALCULATOR_VERSION', '4.2.6' );
 define( 'WP_CALORIE_CALCULATOR_PLUGIN_FILE', plugin_basename( __FILE__ ) );
 define( 'WP_CALORIE_CALCULATOR_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 

@@ -1,10 +1,10 @@
 === WP Calorie Calculator ===
 Contributors: belovdigital
-Tags: calorie calculator, plan, health, nutrition, macros, sport, fitness, gym, lifestyle
+Tags: calorie calculator, health, nutrition, fitness, diet
 Requires at least: 4.7
-Tested up to: 6.7.2
+Tested up to: 6.8.1
 Requires PHP: 5.6
-Stable tag: 4.2.4
+Stable tag: 4.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,7 @@ For all experts in fitness, health & calories-dependent nutrition or sports: mee
 
 WordPress Calorie Calculator by <a href="https://belovdigital.agency/">Belov</a> is a plugin and a marketing tool that works wonders in user attraction.
 
-This plugin is weight management for your visitors made simple. Whether you are launching a WordPress website to help others achieve their desired body mass or working on your own shape and fitness, the WP Calorie Calculator plugin is what you’re looking for.
+This plugin is weight management for your visitors made simple. Whether you are launching a WordPress website to help others achieve their desired body mass or working on your own shape and fitness, the WP Calorie Calculator plugin is what you're looking for.
 
 Having a calorie calculator on your website is an absolute must if your business is in the nutrition, health or fitness sector. Your clients will most definitely enjoy the opportunity to monitor and manage their daily calorie norms and body mass with the help of your website. Make your service catchy and get more leads!
 
@@ -39,7 +39,7 @@ BMR, or basal metabolic rate, is one of the most widely used parameters for defi
 
 
 <h3><strong>HOW IT WORKS</strong></h3>
-Our Calorie Calculator for WordPress gives you the shortcode for your website’s page, post, or sidebar. Put it anywhere it suits the most to catch the attention of your visitors!
+Our Calorie Calculator for WordPress gives you the shortcode for your website's page, post, or sidebar. Put it anywhere it suits the most to catch the attention of your visitors!
 
 <h4><strong>Weight, heights, goals: the calculator accounts for everything</strong></h4>
 Once you have installed the plugin, you get a neatly designed Calculator settings section in your WordPress admin area. There are a few tabs where you can configure input fields for age, body mass, and height, gender selector, and measure units toggle. Other parameters are configurable in the <a href="https://wpcaloriecalculator.com/">Pro edition of WP Calorie Caluclator</a> (UPD: V4 is out!). Among those, there are lifestyle for which users tick the one that fits them best and body mass goals with the dropdown menu offering weight maintenance, loss, or gain (and the pace of the process).
@@ -54,7 +54,7 @@ This built-in calculator will, without a doubt, be a most-liked feature on your 
 It runs as you go: if you select an instant view, WordPress Calorie Calculator demonstrates the results straight after everything is typed. No need to click on any additional buttons: our calculator plugin is as user-friendly as possible. Alternatively, you can ask users to provide their emails to which the plugin will send the results.
 
 <h3><strong>INCREASE USER INVOLVEMENT WITH WP CALORIE CALCULATOR</strong></h3>
-Creating a WordPress website to offer nutritionist service or a diet management program? The WP Calorie Calculator by <a href="https://belovdigital.agency/">Belov</a> is the easiest way to capture people’s attention by personalizing their nutrition plan.
+Creating a WordPress website to offer nutritionist service or a diet management program? The WP Calorie Calculator by <a href="https://belovdigital.agency/">Belov</a> is the easiest way to capture people's attention by personalizing their nutrition plan.
 
 Interaction holds attention like nothing else! Your site visitors will spend more time online and will be much more likely to convert into customers. Besides, you can collect emails with the form provided: some serious help to your marketing!
  
@@ -164,7 +164,7 @@ Absolutely! Give it any title you prefer by inserting it in the shortcode. It go
 At the moment the plugin has German language. Translation to other languages is in progress: we are adding more languages soon. Stay tuned!
 
 
-= I don’t particularly like the Mifflin – St. Jeor way of calculation. Is it possible to change the formula?
+= I don't particularly like the Mifflin – St. Jeor way of calculation. Is it possible to change the formula?
 
 This version supports only this formula. However, the PRO version allows you to choose between a few most popular ones.
 
@@ -194,6 +194,15 @@ You can always message our online support or ask your question on the WordPress 
 
 
 == Changelog ==
+
+= 4.2.6 2025-07-07 =
+- Added support for WordPress 6.8.1
+- Performance improvements and security enhancements.
+
+
+= 4.2.5 2025-03-17 =
+- Performance improvements and security enhancements.
+
 
 = 4.2.4 2025-02-12 =
 - Added support for WordPress 6.7.2
