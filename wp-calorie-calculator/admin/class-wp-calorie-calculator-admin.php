@@ -53,18 +53,6 @@ class WP_Calorie_Calculator_Admin {
 	}
 
 	/**
-	 * Pro plugin deactivation.
-	 *
-	 * @since    2.0.0
-	 */
-	public function pro_deactivate() {
-		if ( get_transient( 'wpcc_pro_deactivate' ) ) {
-			deactivate_plugins( 'wp-calorie-calculator-pro/wp-calorie-calculator-pro.php' );
-			delete_transient( 'wpcc_pro_deactivate' );
-		}
-	}
-
-	/**
 	 * Plugin activation notice.
 	 *
 	 * @since    1.0.0
@@ -76,7 +64,7 @@ class WP_Calorie_Calculator_Admin {
 				<p>
 					<?php
 					// translators: %s - settings link.
-					echo esc_html__( 'Thank you for installing our WP Calorie Calculator plugin. The next step is to <a href="admin.php?page=wp-calorie-calculator">configure the settings of the plugin</a>.', 'wp-calorie-calculator' );
+					echo wp_kses_post( sprintf( __( 'Thank you for installing our WP Calorie Calculator plugin. The next step is to <a href="%s">configure the settings of the plugin</a>.', 'wp-calorie-calculator' ), admin_url( 'admin.php?page=wp-calorie-calculator' ) ) );
 					?>
 				</p>
 			</div>

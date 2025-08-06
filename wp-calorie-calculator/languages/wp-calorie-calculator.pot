@@ -14,195 +14,195 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. translators: %s - settings link.
-#: admin/class-wp-calorie-calculator-admin.php:79
-msgid "Thank you for installing our WP Calorie Calculator plugin. The next step is to <a href=\"admin.php?page=wp-calorie-calculator\">configure the settings of the plugin</a>."
+#: admin/class-wp-calorie-calculator-admin.php:67
+msgid "Thank you for installing our WP Calorie Calculator plugin. The next step is to <a href=\"%s\">configure the settings of the plugin</a>."
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:121
+#: admin/class-wp-calorie-calculator-admin.php:109
 msgid "Copied!"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:122, admin/partials/wp-calorie-calculator-admin-display.php:212
+#: admin/class-wp-calorie-calculator-admin.php:110, admin/partials/wp-calorie-calculator-admin-display.php:212
 msgid "Copy shortcode"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:141
+#: admin/class-wp-calorie-calculator-admin.php:129
 msgid "Create your Mifflin - St. Jeor Calorie Calculator"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:142
+#: admin/class-wp-calorie-calculator-admin.php:130
 msgid "Calorie Calculator"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:196, admin/partials/wp-calorie-calculator-admin-display.php:220, admin/partials/wp-calorie-calculator-admin-display.php:263
+#: admin/class-wp-calorie-calculator-admin.php:184, admin/partials/wp-calorie-calculator-admin-display.php:220, admin/partials/wp-calorie-calculator-admin-display.php:263
 msgid "Settings"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:213
+#: admin/class-wp-calorie-calculator-admin.php:201
 msgid "The PRO edition of WP Calorie Calculator is out!"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:215
+#: admin/class-wp-calorie-calculator-admin.php:203
 msgid "ConvertKit, Hubspot, Mailchimp, Zapier integration, Google reCAPTCHA, flexible calculation and style settings, custom templates, a fully customizable Elementor widget and other cool add-ons - try now and make your website users’ favorite place to be!"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:217
+#: admin/class-wp-calorie-calculator-admin.php:205
 msgid "Get it"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:232, admin/class-wp-calorie-calculator-admin.php:233
+#: admin/class-wp-calorie-calculator-admin.php:220, admin/class-wp-calorie-calculator-admin.php:221
 msgid "Go Pro"
 msgstr ""
 
-#: admin/class-wp-calorie-calculator-admin.php:249
+#: admin/class-wp-calorie-calculator-admin.php:237
 msgid "Get PRO"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:268
+#: includes/class-wp-calorie-calculator.php:267
 msgid "Main title color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:272
+#: includes/class-wp-calorie-calculator.php:271
 msgid "Main title border color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:276
+#: includes/class-wp-calorie-calculator.php:275
 msgid "Text color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:280
+#: includes/class-wp-calorie-calculator.php:279
 msgid "Switcher circle color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:284
+#: includes/class-wp-calorie-calculator.php:283
 msgid "Switcher background color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:288
+#: includes/class-wp-calorie-calculator.php:287
 msgid "Labels color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:292
+#: includes/class-wp-calorie-calculator.php:291
 msgid "Radio button color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:296
+#: includes/class-wp-calorie-calculator.php:295
 msgid "Tooltip icon color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:300
+#: includes/class-wp-calorie-calculator.php:299
 msgid "Input border color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:304
+#: includes/class-wp-calorie-calculator.php:303
 msgid "Result background color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:308
+#: includes/class-wp-calorie-calculator.php:307
 msgid "Result title color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:312
+#: includes/class-wp-calorie-calculator.php:311
 msgid "Result text color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:316
+#: includes/class-wp-calorie-calculator.php:315
 msgid "Result icon background"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:320
+#: includes/class-wp-calorie-calculator.php:319
 msgid "Result icon color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:324
+#: includes/class-wp-calorie-calculator.php:323
 msgid "Button background color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:328
+#: includes/class-wp-calorie-calculator.php:327
 msgid "Button background color on hover"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:332
+#: includes/class-wp-calorie-calculator.php:331
 msgid "Button text color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:336
+#: includes/class-wp-calorie-calculator.php:335
 msgid "Form checkbox color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:340
+#: includes/class-wp-calorie-calculator.php:339
 msgid "Form links color"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:344
+#: includes/class-wp-calorie-calculator.php:343
 msgid "Form links color on hover"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:361, public/class-wp-calorie-calculator-public.php:118, admin/partials/wp-calorie-calculator-admin-display.php:65
+#: includes/class-wp-calorie-calculator.php:360, public/class-wp-calorie-calculator-public.php:118, admin/partials/wp-calorie-calculator-admin-display.php:65
 msgid "Maintain Weight"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:365, admin/partials/wp-calorie-calculator-admin-display.php:72
+#: includes/class-wp-calorie-calculator.php:364, admin/partials/wp-calorie-calculator-admin-display.php:72
 msgid "Mild Weight Loss"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:369, public/class-wp-calorie-calculator-public.php:121, admin/partials/wp-calorie-calculator-admin-display.php:79
+#: includes/class-wp-calorie-calculator.php:368, public/class-wp-calorie-calculator-public.php:121, admin/partials/wp-calorie-calculator-admin-display.php:79
 msgid "Weight Loss"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:373, admin/partials/wp-calorie-calculator-admin-display.php:86
+#: includes/class-wp-calorie-calculator.php:372, admin/partials/wp-calorie-calculator-admin-display.php:86
 msgid "Mild Weight Gain"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:377, public/class-wp-calorie-calculator-public.php:127, admin/partials/wp-calorie-calculator-admin-display.php:93
+#: includes/class-wp-calorie-calculator.php:376, public/class-wp-calorie-calculator-public.php:127, admin/partials/wp-calorie-calculator-admin-display.php:93
 msgid "Weight Gain"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:393, public/class-wp-calorie-calculator-public.php:152, admin/partials/wp-calorie-calculator-admin-display.php:32
+#: includes/class-wp-calorie-calculator.php:392, public/class-wp-calorie-calculator-public.php:152, admin/partials/wp-calorie-calculator-admin-display.php:32
 msgid "Sedentary"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:394, admin/partials/wp-calorie-calculator-admin-display.php:33
+#: includes/class-wp-calorie-calculator.php:393, admin/partials/wp-calorie-calculator-admin-display.php:33
 msgid "Spend most of the day sitting, with little or no exercise"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:398, public/class-wp-calorie-calculator-public.php:155, admin/partials/wp-calorie-calculator-admin-display.php:37
+#: includes/class-wp-calorie-calculator.php:397, public/class-wp-calorie-calculator-public.php:155, admin/partials/wp-calorie-calculator-admin-display.php:37
 msgid "Light"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:399, admin/partials/wp-calorie-calculator-admin-display.php:38
+#: includes/class-wp-calorie-calculator.php:398, admin/partials/wp-calorie-calculator-admin-display.php:38
 msgid "Exercise 1-3 times/week"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:403, public/class-wp-calorie-calculator-public.php:158, admin/partials/wp-calorie-calculator-admin-display.php:42
+#: includes/class-wp-calorie-calculator.php:402, public/class-wp-calorie-calculator-public.php:158, admin/partials/wp-calorie-calculator-admin-display.php:42
 msgid "Moderate"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:404, admin/partials/wp-calorie-calculator-admin-display.php:43
+#: includes/class-wp-calorie-calculator.php:403, admin/partials/wp-calorie-calculator-admin-display.php:43
 msgid "Exercise 4-5 times/week"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:408, public/class-wp-calorie-calculator-public.php:161, admin/partials/wp-calorie-calculator-admin-display.php:47
+#: includes/class-wp-calorie-calculator.php:407, public/class-wp-calorie-calculator-public.php:161, admin/partials/wp-calorie-calculator-admin-display.php:47
 msgid "Active"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:409, admin/partials/wp-calorie-calculator-admin-display.php:48
+#: includes/class-wp-calorie-calculator.php:408, admin/partials/wp-calorie-calculator-admin-display.php:48
 msgid "Daily exercise or intense exercise 3-4 times/week"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:413, public/class-wp-calorie-calculator-public.php:164, admin/partials/wp-calorie-calculator-admin-display.php:52
+#: includes/class-wp-calorie-calculator.php:412, public/class-wp-calorie-calculator-public.php:164, admin/partials/wp-calorie-calculator-admin-display.php:52
 msgid "Very Active"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:414, admin/partials/wp-calorie-calculator-admin-display.php:53
+#: includes/class-wp-calorie-calculator.php:413, admin/partials/wp-calorie-calculator-admin-display.php:53
 msgid "Intense exercise 6-7 times/week"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:418, public/class-wp-calorie-calculator-public.php:167, admin/partials/wp-calorie-calculator-admin-display.php:57
+#: includes/class-wp-calorie-calculator.php:417, public/class-wp-calorie-calculator-public.php:167, admin/partials/wp-calorie-calculator-admin-display.php:57
 msgid "Extra Active"
 msgstr ""
 
-#: includes/class-wp-calorie-calculator.php:419, admin/partials/wp-calorie-calculator-admin-display.php:58
+#: includes/class-wp-calorie-calculator.php:418, admin/partials/wp-calorie-calculator-admin-display.php:58
 msgid "Very intense exercise daily, or physical job"
 msgstr ""
 

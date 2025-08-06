@@ -152,7 +152,6 @@ class WP_Calorie_Calculator {
 		$plugin_admin = new WP_Calorie_Calculator_Admin( $this->get_plugin_name(), $this->get_version() );
 		$plugin_file  = WP_CALORIE_CALCULATOR_PLUGIN_FILE;
 
-		$this->loader->add_action( 'admin_init', $plugin_admin, 'pro_deactivate' );
 		$this->loader->add_action( 'admin_notices', $plugin_admin, 'pro_version_advertisement' );
 		$this->loader->add_action( 'admin_notices', $plugin_admin, 'activation_notice' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
