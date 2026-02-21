@@ -202,7 +202,7 @@ class WP_Calorie_Calculator_Admin {
 				<p>
 					<?php echo esc_html__( 'ConvertKit, Hubspot, Mailchimp, Zapier integration, Google reCAPTCHA, flexible calculation and style settings, custom templates, a fully customizable Elementor widget and other cool add-ons - try now and make your website users’ favorite place to be!', 'wp-calorie-calculator' ); ?>
 				</p>
-				<p><a class="button" href="https://wpcaloriecalculator.com/?visitsource=wporgfree" target="_blank"><?php echo esc_html__( 'Get it', 'wp-calorie-calculator' ); ?></a></p>
+				<p><a class="button" href="https://wpcaloriecalculator.com/pricing/?visitsource=wporgfree" target="_blank"><?php echo esc_html__( 'Get it', 'wp-calorie-calculator' ); ?></a></p>
 			</div>
 			<?php
 			update_option( 'wpcc_pro_version_advertisement', true );
@@ -217,8 +217,8 @@ class WP_Calorie_Calculator_Admin {
 	public function go_pro_menu() {
 		add_submenu_page(
 			$this->plugin_name,
-			__( 'Go Pro', 'wp-calorie-calculator' ),
-			__( 'Go Pro', 'wp-calorie-calculator' ),
+			__( 'Download PRO', 'wp-calorie-calculator' ),
+			__( 'Download PRO', 'wp-calorie-calculator' ),
 			'manage_options',
 			'#wpcc-go-pro',
 			null,
@@ -234,7 +234,7 @@ class WP_Calorie_Calculator_Admin {
 	 */
 	public function wpcc_pro_plugin_settings_link( $wpcc_settings_links ) {
 		if ( ! get_transient( 'wpcc_pro_deactivate' ) ) {
-			$pro_settings_link = '<a href="https://wpcaloriecalculator.com/?visitsource=wporgfree" style="font-weight: 600;color: red;" target="_blank">' . __( 'Get PRO', 'wp-calorie-calculator' ) . '</a>';
+			$pro_settings_link = '<a href="https://wpcaloriecalculator.com/pricing/?visitsource=wporgfree" style="font-weight: 600;color: red;" target="_blank">' . __( 'Get PRO', 'wp-calorie-calculator' ) . '</a>';
 			array_unshift( $wpcc_settings_links, $pro_settings_link );
 
 			return $wpcc_settings_links;

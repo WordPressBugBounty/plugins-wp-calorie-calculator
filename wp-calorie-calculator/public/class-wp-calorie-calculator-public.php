@@ -172,7 +172,7 @@ class WP_Calorie_Calculator_Public {
 		$zapier_data               = array(
 			'email'    => $user_email,
 			'age'      => $age,
-			'sex'      => $gender,
+			'gender'   => $gender,
 			'weight'   => $weight_string,
 			'result'   => $result,
 			'goal'     => $goal,
@@ -206,7 +206,7 @@ class WP_Calorie_Calculator_Public {
 		$message .= sprintf( __( 'It is %s', 'wp-calorie-calculator' ), $result ) . "\n\n";
 		$message .= __( 'Your parameters:', 'wp-calorie-calculator' ) . "\n\n";
 		// translators: %s - gender.
-		$message .= sprintf( __( 'Sex: %s', 'wp-calorie-calculator' ), $gender ) . "\n";
+		$message .= sprintf( __( 'Gender: %s', 'wp-calorie-calculator' ), $gender ) . "\n";
 		// translators: %s - age.
 		$message .= sprintf( __( 'Age: %s', 'wp-calorie-calculator' ), $age ) . "\n";
 		// translators: %s - height.

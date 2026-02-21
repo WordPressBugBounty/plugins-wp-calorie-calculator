@@ -85,10 +85,10 @@ endif;
 
 			<div id="wpcc_metric" class="wpcc-row wpcc-row-basic wpcc-metric<?php echo ! $metric_system ? ' imperial' : ''; ?>">
 
-				<div class="wpcc-select-wrapper wpcc-sex">
-					<input class="wpcc-sex-placeholder" type="hidden" value="<?php esc_attr_e( 'm / f', 'wp-calorie-calculator' ); ?>"/>					
-					<label for="wpcc-gender"><?php esc_attr_e( 'Sex', 'wp-calorie-calculator' ); ?></label>
-					<select class="wpcc-select select-sex no-select2" name="wpcc-gender" id="wpcc-gender" value="false">
+			<div class="wpcc-select-wrapper wpcc-gender">
+				<input class="wpcc-gender-placeholder" type="hidden" value="<?php esc_attr_e( 'Select gender', 'wp-calorie-calculator' ); ?>"/>					
+				<label for="wpcc-gender"><?php esc_attr_e( 'Gender', 'wp-calorie-calculator' ); ?></label>
+				<select class="wpcc-select select-gender no-select2" name="wpcc-gender" id="wpcc-gender" value="false">
 						<option value="male"><?php esc_attr_e( 'Male', 'wp-calorie-calculator' ); ?></option>
 						<option value="female"><?php esc_attr_e( 'Female', 'wp-calorie-calculator' ); ?></option>
 					</select>

@@ -4,7 +4,7 @@ Tags: calorie calculator, health, nutrition, fitness, diet
 Requires at least: 4.7
 Tested up to: 6.9
 Requires PHP: 5.6
-Stable tag: 4.3.0
+Stable tag: 4.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,7 +35,7 @@ No one wants to spend their life on endless calculations! Let your visitors dele
 
 
 <h3><strong>SCIENCE BEHIND THE CALORIES</strong></h3>
-BMR, or basal metabolic rate, is one of the most widely used parameters for defining the preferred calorie ratio. For our calculator plugin, we use the <strong>Mifflin—St. Jeor formula.</strong> It identifies BMR by analyzing the essential features of your organism: <strong>body mass, height, age, and biological sex.</strong> The plugin calculates daily calorie consumption rate using those numbers with the multipliers needed to account for the <strong>goals</strong> and <strong>conditions.</strong> The formula also takes sports and other <strong>types of activity</strong> into account: this way, the users can be sure that the calorie norm offered by WP Calorie Calculator corresponds with their individual physical characteristics such as weight, height, and others.
+BMR, or basal metabolic rate, is one of the most widely used parameters for defining the preferred calorie ratio. For our calculator plugin, we use the <strong>Mifflin—St. Jeor formula.</strong> It identifies BMR by analyzing the essential features of your organism: <strong>body mass, height, age, and gender.</strong> The plugin calculates daily calorie consumption rate using those numbers with the multipliers needed to account for the <strong>goals</strong> and <strong>conditions.</strong> The formula also takes sports and other <strong>types of activity</strong> into account: this way, the users can be sure that the calorie norm offered by WP Calorie Calculator corresponds with their individual physical characteristics such as weight, height, and others.
 
 
 <h3><strong>HOW IT WORKS</strong></h3>
@@ -194,6 +194,13 @@ You can always message our online support or ask your question on the WordPress 
 
 
 == Changelog ==
+
+= 4.4.0 2026-02-21 =
+- Modernized Compact Pretty frontend design with updated styling.
+- Renamed "Sex" field to "Gender" across the entire plugin.
+- Improved Activity Level layout for better visual consistency.
+- Improved result form layout with proper alignment and spacing.
+- Redesigned admin settings UI.
 
 = 4.3.0 2025-12-03 =
 - Added support for WordPress 6.9

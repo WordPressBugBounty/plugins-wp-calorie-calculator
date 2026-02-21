@@ -138,8 +138,8 @@ $wpcc_email_user_body .= sprintf( esc_html__( 'Protein: %s g', 'wp-calorie-calcu
 /* translators: %s: carbs */
 $wpcc_email_user_body .= sprintf( esc_html__( 'Carbs: %s g', 'wp-calorie-calculator' ), '{carbs}' ) . "\n\n";
 $wpcc_email_user_body .= esc_html__( 'Your parameters:', 'wp-calorie-calculator' ) . "\n\n";
-/* translators: %s: sex */
-$wpcc_email_user_body .= sprintf( esc_html__( 'Sex: %s', 'wp-calorie-calculator' ), '{sex}' ) . "\n";
+/* translators: %s: gender */
+$wpcc_email_user_body .= sprintf( esc_html__( 'Gender: %s', 'wp-calorie-calculator' ), '{gender}' ) . "\n";
 /* translators: %s: age */
 $wpcc_email_user_body .= sprintf( esc_html__( 'Age: %s', 'wp-calorie-calculator' ), '{age}' ) . "\n";
 /* translators: %s: height */
@@ -216,44 +216,40 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 								</div>																
 							</li>
 							<li>
-								<a href="#main-settings" class="active">
-									<span><?php esc_attr_e( 'Settings', 'wp-calorie-calculator' ); ?></span>
-									<svg>
-										<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-main.svg#main' ); ?>"></use>
-									</svg>							
-								</a>
-							<li>
-								<a href="#calculation-settings">
-									<span><?php esc_attr_e( 'Calculation', 'wp-calorie-calculator' ); ?></span>
-									<svg>
-										<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-calculation.svg#calc' ); ?>"></use>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="#styling-settings">
-									<span><?php esc_attr_e( 'Styling', 'wp-calorie-calculator' ); ?></span>
-									<svg>
-										<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-styling.svg#styling' ); ?>"></use>
-									</svg>
+							<a href="#main-settings" class="active">
+								<span><?php esc_attr_e( 'Settings', 'wp-calorie-calculator' ); ?></span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
 							</a>
-							</li>
-							<li>
-								<a href="#integration-settings">
-									<span><?php esc_html_e( 'Integrations', 'wp-calorie-calculator' ); ?></span>
-									<svg>
-										<use xlink:href="<?php echo esc_url( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-integrations.svg#integration' ); ?>"></use>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="#templates-settings">
-									<span><?php esc_attr_e( 'Email templates', 'wp-calorie-calculator' ); ?></span>
-									<svg>
-										<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/settings-email.svg#email' ); ?>"></use>
-									</svg>
-								</a>
-							</li>
+						<li>
+							<a href="#calculation-settings">
+								<span><?php esc_attr_e( 'Calculation', 'wp-calorie-calculator' ); ?></span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#styling-settings">
+								<span><?php esc_attr_e( 'Styling', 'wp-calorie-calculator' ); ?></span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0 0 20 2 2 0 0 0 2-2v-1a2 2 0 0 1 2-2h1a2 2 0 0 0 2-2 10 10 0 0 0-7-13Z"/><circle cx="8" cy="10" r="1.5"/><circle cx="12" cy="7" r="1.5"/><circle cx="16" cy="10" r="1.5"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#integration-settings">
+								<span><?php esc_html_e( 'Integrations', 'wp-calorie-calculator' ); ?></span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+							</a>
+						</li>
+						<li>
+							<a href="#templates-settings">
+								<span><?php esc_attr_e( 'Email templates', 'wp-calorie-calculator' ); ?></span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+							</a>
+						</li>
+						<li class="wpcc-tab-upgrade">
+							<a href="https://wpcaloriecalculator.com/pricing/?visitsource=wporgfree" target="_blank" class="wpcc-tab-upgrade-link">
+								<span><?php esc_html_e( 'Upgrade to PRO', 'wp-calorie-calculator' ); ?></span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6-6 6 6"/><path d="M12 3v14"/><path d="M4 21h16"/></svg>
+							</a>
+						</li>
 						</ul>
 					</div>
 
@@ -336,25 +332,34 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 											</div>
 										</span>
 									</label>
-									<label class="wpcc-radio disabled">
-										<input type="radio" disabled>
-
-										<span><?php esc_attr_e( 'Instant View with Email request', 'wp-calorie-calculator' ); ?></span>
-										<span class="wpcc-tooltip">
-											<svg class="wpcc-tooltip-icon" style="width:20px;height:20px">
-													<use xlink:href="<?php echo esc_attr( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'public/images/help.svg#help' ); ?>"></use>
-											</svg>
-											<div class="wpcc-tooltip-text">
-												<?php esc_attr_e( 'The user will see the results on the page after entering their data.', 'wp-calorie-calculator' ); ?>
-											</div>
-										</span>
-										<div class="wpcc-settings-pro">PRO
-												<div class="wpcc-settings-pro-tooltip">
-													<?php esc_attr_e( 'These features are available in the PRO version', 'wp-calorie-calculator' ); ?>
-												</div>
-											</div>
-									</label>
-								</div>
+								<label class="wpcc-radio disabled">
+									<input type="radio" disabled>
+									<span><?php esc_attr_e( 'Instant View with Email request', 'wp-calorie-calculator' ); ?></span>
+									<div class="wpcc-settings-pro">PRO
+										<div class="wpcc-settings-pro-tooltip">
+											<?php esc_attr_e( 'These features are available in the PRO version', 'wp-calorie-calculator' ); ?>
+										</div>
+									</div>
+								</label>
+								<label class="wpcc-radio disabled">
+									<input type="radio" disabled>
+									<span><?php esc_attr_e( 'Download PDF', 'wp-calorie-calculator' ); ?></span>
+									<div class="wpcc-settings-pro">PRO
+										<div class="wpcc-settings-pro-tooltip">
+											<?php esc_attr_e( 'These features are available in the PRO version', 'wp-calorie-calculator' ); ?>
+										</div>
+									</div>
+								</label>
+								<label class="wpcc-radio disabled">
+									<input type="radio" disabled>
+									<span><?php esc_attr_e( 'Both Buttons (Email + PDF)', 'wp-calorie-calculator' ); ?></span>
+									<div class="wpcc-settings-pro">PRO
+										<div class="wpcc-settings-pro-tooltip">
+											<?php esc_attr_e( 'These features are available in the PRO version', 'wp-calorie-calculator' ); ?>
+										</div>
+									</div>
+								</label>
+							</div>
 							</div>
 
 							<div class="wpcc-settings-group wpcc-notification-email-wrapper" style="<?php echo $instant_result ? 'display:none;' : ''; ?>">
@@ -541,12 +546,17 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 									</h3>
 								</div>
 
-								<div class="wpcc-settings-group-content">
+							<div class="wpcc-settings-group-content">
 
-									<label class="wpcc-checkbox">
-										<input type="checkbox" checked disabled>
-										<span><?php esc_attr_e( 'Show Basal Metabolic Rate (BMR)', 'wp-calorie-calculator' ); ?></span>
-									</label>
+								<label class="wpcc-checkbox">
+									<input type="checkbox" checked disabled>
+									<span><?php esc_attr_e( 'Show Target calorie intake per day', 'wp-calorie-calculator' ); ?></span>
+								</label>
+
+								<label class="wpcc-checkbox">
+									<input type="checkbox" checked disabled>
+									<span><?php esc_attr_e( 'Show Basal Metabolic Rate (BMR)', 'wp-calorie-calculator' ); ?></span>
+								</label>
 
 									<label class="wpcc-checkbox">
 										<input type="checkbox" checked disabled>
@@ -1051,30 +1061,52 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 								</div>
 							</div>
 
-							<div class="wpcc-settings-group block-disabled">
-								<div class="wpcc-settings-group-title">
-									<h3>
-										<?php esc_html_e( 'Mailchimp', 'wp-calorie-calculator' ); ?>
-										<div class="wpcc-settings-pro">PRO
-											<div class="wpcc-settings-pro-tooltip">
-												<?php esc_attr_e( 'These features are available in the PRO version', 'wp-calorie-calculator' ); ?>
-											</div>
+						<div class="wpcc-settings-group block-disabled">
+							<div class="wpcc-settings-group-title">
+								<h3>
+									<?php esc_html_e( 'Mailchimp', 'wp-calorie-calculator' ); ?>
+									<div class="wpcc-settings-pro">PRO
+										<div class="wpcc-settings-pro-tooltip">
+											<?php esc_attr_e( 'These features are available in the PRO version', 'wp-calorie-calculator' ); ?>
 										</div>
-									</h3>
-									<img src="<?php echo esc_url( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/mailchimp.svg' ); ?>" alt="">
-								</div>
-
-								<div class="wpcc-settings-group-content">
-									<div class="wpcc-settings-subgroup">
-										<label class="wpcc-checkbox">
-											<input type="checkbox">
-											<span><?php esc_html_e( 'Enable Mailchimp', 'wp-calorie-calculator' ); ?></span>
-										</label>
 									</div>
-								</div>
+								</h3>
+								<img src="<?php echo esc_url( WP_CALORIE_CALCULATOR_PLUGIN_URL . 'admin/images/mailchimp.svg' ); ?>" alt="">
 							</div>
 
-							<div class="wpcc-settings-submit">
+							<div class="wpcc-settings-group-content">
+								<div class="wpcc-settings-subgroup">
+									<label class="wpcc-checkbox">
+										<input type="checkbox">
+										<span><?php esc_html_e( 'Enable Mailchimp', 'wp-calorie-calculator' ); ?></span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="wpcc-settings-group block-disabled">
+							<div class="wpcc-settings-group-title">
+								<h3>
+									<?php esc_html_e( 'Make (Integromat)', 'wp-calorie-calculator' ); ?>
+									<div class="wpcc-settings-pro">PRO
+										<div class="wpcc-settings-pro-tooltip">
+											<?php esc_attr_e( 'These features are available in the PRO version', 'wp-calorie-calculator' ); ?>
+										</div>
+									</div>
+								</h3>
+							</div>
+
+							<div class="wpcc-settings-group-content">
+								<div class="wpcc-settings-subgroup">
+									<label class="wpcc-checkbox">
+										<input type="checkbox">
+										<span><?php esc_html_e( 'Enable Make', 'wp-calorie-calculator' ); ?></span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="wpcc-settings-submit">
 								<?php echo esc_html( submit_button( null, 'wpcc-submit', 'publish', true, array( 'id' => 'publish' ) ) ); ?>
 							</div>
 
@@ -1135,8 +1167,8 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 												<td><?php esc_attr_e( 'Calculated carbs, g', 'wp-calorie-calculator' ); ?></td>
 											</tr>
 											<tr>
-												<td><?php echo '{sex}'; ?></td>
-												<td><?php esc_attr_e( "The user's sex", 'wp-calorie-calculator' ); ?></td>
+										<td><?php echo '{gender}'; ?></td>
+											<td><?php esc_attr_e( "The user's gender", 'wp-calorie-calculator' ); ?></td>
 											</tr>
 											<tr>
 												<td><?php echo '{age}'; ?></td>
@@ -1214,11 +1246,19 @@ $wpcc_enable_zapier  = get_option( 'wpcc_enable_zapier', '' );
 			<div class="wpcc-settings-sidebar">
 
 
-				<div class="wpcc-banner wpcc-banner--red">
-					<div class="wpcc-banner-title"><?php esc_attr_e( 'PRO Edition', 'wp-calorie-calculator' ); ?></div>
-					<div class="wpcc-banner-description wpcc-banner-description--bold"><?php esc_attr_e( 'Support of: ', 'wp-calorie-calculator' ); ?></div>
-					<div class="wpcc-banner-description"><?php esc_attr_e( 'ConvertKit, Hubspot, Mailchimp, Zapier, Make, Google reCAPTCHA, Elementor widget and other amazing add-ons', 'wp-calorie-calculator' ); ?></div>
-					<a class="wpcc-banner-button" href="https://wpcaloriecalculator.com/?visitsource=wporgfree" target="_blank"><?php esc_attr_e( 'Get Pro', 'wp-calorie-calculator' ); ?></a>
+				<div class="wpcc-banner wpcc-banner--pro">
+					<div class="wpcc-banner-pro-badge"><?php esc_html_e( 'PRO', 'wp-calorie-calculator' ); ?></div>
+					<div class="wpcc-banner-title"><?php esc_html_e( 'Unlock Full Power', 'wp-calorie-calculator' ); ?></div>
+					<div class="wpcc-banner-description"><?php esc_html_e( 'Get access to all premium features and take your calculator to the next level.', 'wp-calorie-calculator' ); ?></div>
+					<ul class="wpcc-banner-features">
+						<li><?php esc_html_e( 'PDF results & email templates', 'wp-calorie-calculator' ); ?></li>
+						<li><?php esc_html_e( 'Custom formulas & activity levels', 'wp-calorie-calculator' ); ?></li>
+						<li><?php esc_html_e( 'Advanced styling & layouts', 'wp-calorie-calculator' ); ?></li>
+						<li><?php esc_html_e( 'Mailchimp, HubSpot, ConvertKit', 'wp-calorie-calculator' ); ?></li>
+						<li><?php esc_html_e( 'Zapier, Make, reCAPTCHA', 'wp-calorie-calculator' ); ?></li>
+						<li><?php esc_html_e( 'Elementor widget', 'wp-calorie-calculator' ); ?></li>
+					</ul>
+					<a class="wpcc-banner-cta" href="https://wpcaloriecalculator.com/pricing/?visitsource=wporgfree" target="_blank"><?php esc_html_e( 'Upgrade to PRO', 'wp-calorie-calculator' ); ?> →</a>
 				</div>
 
 
