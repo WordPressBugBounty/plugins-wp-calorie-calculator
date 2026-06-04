@@ -164,6 +164,65 @@ class WP_Calorie_Calculator_Admin {
 	}
 
 	/**
+	 * Check whether the current admin screen is the plugin settings page.
+	 *
+	 * @since    4.2.7
+	 * @return   bool
+	 */
+	private function is_plugin_settings_page() {
+		if ( ! function_exists( 'get_current_screen' ) ) {
+			return false;
+		}
+
+		$screen = get_current_screen();
+
+		return $screen && 'toplevel_page_' . $this->plugin_name === $screen->id;
+	}
+
+	/**
+	 * Remove admin notices injected by other plugins and themes on the plugin
+	 * settings page, while keeping the plugin's own notices intact.
+	 *
+	 * @since    4.2.7
+	 */
+	public function remove_third_party_notices() {
+		if ( ! $this->is_plugin_settings_page() ) {
+			return;
+		}
+
+		global $wp_filter;
+
+		$notice_hooks = array(
+			'admin_notices',
+			'all_admin_notices',
+			'user_admin_notices',
+			'network_admin_notices',
+		);
+
+		foreach ( $notice_hooks as $hook ) {
+			if ( empty( $wp_filter[ $hook ] ) ) {
+				continue;
+			}
+
+			foreach ( $wp_filter[ $hook ]->callbacks as $priority => $callbacks ) {
+				foreach ( $callbacks as $key => $callback ) {
+					// Keep notices registered by this plugin.
+					if (
+						is_array( $callback['function'] )
+						&& isset( $callback['function'][0] )
+						&& is_object( $callback['function'][0] )
+						&& $callback['function'][0] instanceof WP_Calorie_Calculator_Admin
+					) {
+						continue;
+					}
+
+					unset( $wp_filter[ $hook ]->callbacks[ $priority ][ $key ] );
+				}
+			}
+		}
+	}
+
+	/**
 	 * Plugin settings page markup.
 	 *
 	 * @since    1.0.0

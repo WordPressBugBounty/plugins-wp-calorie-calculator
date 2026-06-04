@@ -154,6 +154,7 @@ class WP_Calorie_Calculator {
 
 		$this->loader->add_action( 'admin_notices', $plugin_admin, 'pro_version_advertisement' );
 		$this->loader->add_action( 'admin_notices', $plugin_admin, 'activation_notice' );
+		$this->loader->add_action( 'in_admin_header', $plugin_admin, 'remove_third_party_notices', 999 );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_settings_page' );

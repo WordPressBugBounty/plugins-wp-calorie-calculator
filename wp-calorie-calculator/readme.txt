@@ -2,9 +2,9 @@
 Contributors: belovdigital
 Tags: calorie calculator, health, nutrition, fitness, diet
 Requires at least: 4.7
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 4.4.0
+Stable tag: 4.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -194,6 +194,12 @@ You can always message our online support or ask your question on the WordPress 
 
 
 == Changelog ==
+
+= 4.4.1 2026-06-03 =
+- Added support for WordPress 7.0
+- Hide third-party admin notices on the plugin settings page.
+- Fixed "Upgrade to PRO" link in the settings navigation. 
+- Performance improvements and security enhancements.
 
 = 4.4.0 2026-02-21 =
 - Modernized Compact Pretty frontend design with updated styling.
